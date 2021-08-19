@@ -9,7 +9,7 @@ namespace EfTesting
 {
     class Program
     {
-        public static readonly string ConStr = "Server=.\\sqlexpress;Database=TestDb;User ID=sa;Password=123;";
+        public static readonly string ConStr = "Server=.\\sqlexpress;Database=TestDb2;Integrated Security=true;";
 
         public static bool UseMicrosoftSqlClient = true;
 

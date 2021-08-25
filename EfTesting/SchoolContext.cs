@@ -5,7 +5,7 @@ using System.Data.Entity.SqlServer;
 
 namespace EfTesting
 {
-    [DbConfigurationType(typeof(UiMicrosoftSqlDbConfiguration))]
+    //[DbConfigurationType(typeof(UiMicrosoftSqlDbConfiguration))]
     public class SchoolContext : DbContext
     {
         public SchoolContext(string nameOrConnectionString)
@@ -25,23 +25,23 @@ namespace EfTesting
         }
     }
 
-    public class UiMicrosoftSqlDbConfiguration : DbConfiguration
-    {
-        public UiMicrosoftSqlDbConfiguration()
-        {
-            DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", Microsoft.Data.SqlClient.SqlClientFactory.Instance);
+    //public class UiMicrosoftSqlDbConfiguration : DbConfiguration
+    //{
+    //    public UiMicrosoftSqlDbConfiguration()
+    //    {
+    //        DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", Microsoft.Data.SqlClient.SqlClientFactory.Instance);
 
-            SetProviderFactory(MicrosoftSqlProviderServices.ProviderInvariantName, Microsoft.Data.SqlClient.SqlClientFactory.Instance);
-            SetProviderServices(MicrosoftSqlProviderServices.ProviderInvariantName, MicrosoftSqlProviderServices.Instance);
+    //        SetProviderFactory(MicrosoftSqlProviderServices.ProviderInvariantName, Microsoft.Data.SqlClient.SqlClientFactory.Instance);
+    //        SetProviderServices(MicrosoftSqlProviderServices.ProviderInvariantName, MicrosoftSqlProviderServices.Instance);
 
-            // --------------------------------------------
-            // System.Data.SqlClient or Microsoft.Data.SqlClient
-            if (Program.UseMicrosoftSqlClient)
-            {
-                SetProviderFactoryResolver(new MyDbProviderFactoryResolverAsdasd());
-            }
-        }
-    }
+    //        // --------------------------------------------
+    //        // System.Data.SqlClient or Microsoft.Data.SqlClient
+    //        if (Program.UseMicrosoftSqlClient)
+    //        {
+    //            SetProviderFactoryResolver(new MyDbProviderFactoryResolverAsdasd());
+    //        }
+    //    }
+    //}
 
     public class Student
     {

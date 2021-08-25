@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="ErikEJ.EntityFramework.SqlServer" Version="1.0.0-rc4" />
+    <PackageReference Include="ErikEJ.EntityFramework.SqlServer" Version="6.4.0" />
   </ItemGroup>
 
 </Project>
